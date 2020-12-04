@@ -12,22 +12,20 @@ public class Main {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        for (int i = 0; i < T; i++) {
-            String even="";
-            String odd="";
-            String inputString = sc.next();
-            String[] stringArray = inputString.split("");
-//            char[] charArray = inputString.toCharArray();
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 
-            for (int j = 0; j < stringArray.length; j += 2) {
-                even += stringArray[j];}
-            for (int k = 1; k < stringArray.length; k +=2){
-                odd += stringArray[k];
-            }
-            System.out.println(even + " " + odd);
+        int[] arr = new int[n];
+
+        String[] arrItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < n; i++) {
+            int arrItem = Integer.parseInt(arrItems[i]);
+            arr[i] = arrItem;
         }
+
+        scanner.close();
     }
 
 }
