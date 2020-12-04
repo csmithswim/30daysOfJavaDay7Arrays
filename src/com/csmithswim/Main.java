@@ -25,6 +25,12 @@ public class Main {
             arr[i] = arrItem;
         }
 
+        String finalString = "";
+        for (int i = arr.length-1; i >= 0 ; i--) {
+            finalString += arr[i] + " ";
+        }
+        System.out.println(finalString.trim());
+
         scanner.close();
     }
 
